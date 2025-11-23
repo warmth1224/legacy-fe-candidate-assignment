@@ -1,0 +1,128 @@
+.verification-result {
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.verification-result.valid {
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+}
+
+.verification-result.invalid {
+  background: #fef2f2;
+  border: 2px solid #fca5a5;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  min-width: fit-content;
+}
+
+.status-badge.valid {
+  background: #86efac;
+  color: #166534;
+}
+
+.status-badge.invalid {
+  background: #fca5a5;
+  color: #7f1d1d;
+}
+
+.timestamp {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.result-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-section h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-value {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #1a1a1a;
+  word-break: break-all;
+  overflow-x: auto;
+}
+
+.message-value {
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+.signature-value,
+.result-value:has(code) {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.result-value code {
+  flex: 1;
+}
+
+.copy-btn {
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+  .verification-result {
+    padding: 16px;
+  }
+
+  .result-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .result-value code {
+    font-size: 11px;
+  }
+}

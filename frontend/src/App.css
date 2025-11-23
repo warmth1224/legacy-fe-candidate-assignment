@@ -1,0 +1,149 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.app-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.app-main {
+  flex: 1;
+  padding: 24px 20px;
+}
+
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.primary-column,
+.secondary-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.result-section {
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-result-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.close-result-btn:hover {
+  background: #f5f5f5;
+  border-color: #667eea;
+}
+
+.error {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #c33;
+}
+
+.error h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.error p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    padding: 30px 20px;
+  }
+
+  .app-header h1 {
+    font-size: 28px;
+  }
+
+  .app-main {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 24px 16px;
+  }
+
+  .app-header h1 {
+    font-size: 24px;
+  }
+
+  .app-header p {
+    font-size: 14px;
+  }
+
+  .app-main {
+    padding: 12px 16px;
+  }
+
+  .app-container {
+    gap: 16px;
+  }
+
+  .primary-column,
+  .secondary-column {
+    gap: 16px;
+  }
+}

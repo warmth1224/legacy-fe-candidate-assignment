@@ -1,0 +1,25 @@
+{
+  "name": "web3-message-signer-verifier",
+  "version": "1.0.0",
+  "description": "Full-stack Web3 app for signing and verifying messages using Dynamic.xyz",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend & npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "build": "npm run build --workspace=frontend && npm run build --workspace=backend",
+    "build:frontend": "npm run build --workspace=frontend",
+    "build:backend": "npm run build --workspace=backend",
+    "test": "npm run test --workspace=frontend && npm run test --workspace=backend",
+    "test:frontend": "npm run test --workspace=frontend",
+    "test:backend": "npm run test --workspace=backend",
+    "lint": "npm run lint --workspace=frontend && npm run lint --workspace=backend",
+    "lint:frontend": "npm run lint --workspace=frontend",
+    "lint:backend": "npm run lint --workspace=backend",
+    "typecheck": "npm run typecheck --workspace=frontend && npm run typecheck --workspace=backend"
+  }
+}
