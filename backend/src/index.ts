@@ -14,7 +14,7 @@ app.use(cors({ origin: corsOrigin }))
 
 app.use('/api/verify-signature', verifySignatureRouter)
 
-app.get('/health', (req, res) => {
+app.get('/health', (_, res) => {
   res.json({ status: 'ok' })
 })
 
